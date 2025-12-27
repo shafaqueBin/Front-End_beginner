@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+body{
+
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+nav{
+    background-color: whitesmoke;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+}
+nav ul{
+
+    list-style: none;
+
+ 
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li{
+
+       height: 65px;
+       display: flex;
+       align-items: center;
+
+}
+
+nav a{
+
+    display: flex;
+
+    height: 100%;
+    align-items: center;
+
+    text-decoration: none;
+
+    color: black;
+
+    padding: 0 30px;    /*top-bottom = 0px and left-right = 30px*/
+}
+
+nav a:hover
+{
+    background-color: #f0f0f0;
+    /* color: white; */
+}
+
+#logo{
+
+    width: 180px;
+    height: 48px;
+
+    background-image: url(fixoraLogo.png);
+    background-size: cover;
+
+    margin-left: 10px;
+    
+
+}
+
+nav li:first-child{
+    margin-right: auto;
+  
+}
+
+/* side bar animation template  */
+@keyframes slide-The-sideBar {
+    
+    
+}
+
+.sidebar{
+    position: fixed;
+    top:0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+
+    box-shadow: -10px 0px 20px rgba(0,0,0,0.1);
+
+    z-index: 999;
+    background-color: whitesmoke;
+
+    /* display: none;  */
+    display: flex; /*animation purpose*/
+
+ 
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    transform: translateX(100%);
+    transition: 0.75s ease;
+
+
+}
+
+.sidebar.active{
+    transform: translateX(0);
+  
+}
+
+.menuBar{
+    display: none;
+}
+
+.sidebar li{
+    width: 100%;
+}
+.sidebar a{
+    width: 100%;
+}
+
+@media(max-width: 700px)
+{
+    .hideOnmobile
+    {
+        display: none;
+    }
+    .menuBar{
+        display: flex;
+    }
+}
